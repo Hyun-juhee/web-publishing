@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/* reset */
+*{
+    padding: 0; margin: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* layout */
+.wrap {
+    width: 100%;
+}
+.contents {
+    width: 1280px;
+    margin: 70px auto;
+    position: relative;
+}
+.contents ul {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.contents ul li {
+    float: left;
+    width: 31.3%;
+    margin-right: 3%;
+}
+.contents ul li:nth-child(3) {
+    margin-right: 0;
+}
+.contents ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.contents ul li a p.plan {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #004eff;
+    padding: 20px 25px;
+    z-index: 1;
+}
+.contents ul li p.img {
+    width: 100%;
+    overflow: hidden;
+}
+.contents ul li p.img img {
+    width: 100%;
+    transition: all 0.5s;
+}
+.contents ul li a:hover p.img img {
+    transform: scale(1.3);
+    transition: all 1s;
+}
+.contents ul li a .bottomBox {
+    background-color: white;
+    width: 80%;
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    padding: 20px 0 20px 20px;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 10px rgb(0,0,0,0.28);
+    z-index: 2;
+}
+.contents ul li a .bottomBox p {
+    font-size: 12px;
+    margin-bottom: 14px;
+    font-weight: bold;
+}
+.contents ul li a .bottomBox p.tit {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -1px;
+
+}
+.contents ul li a .bottomBox p span {
+    color: #017cf7;
+}
+.contents ul li a .bottomBox i {
+    position: absolute;
+    font-size: 22px;
+    right: 13px;
+    top: 13px
+}
+.arrow i {
+    font-size: 28px;
+    color: #bbb;
+    padding: 10px;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arrow i:nth-child(1) {
+    left: -50px;
+}
+.arrow i:nth-child(2) {
+    right: -50px;
+}
